@@ -1,6 +1,3 @@
-Sure! Here's a **complete `README.md`** that combines all four tasks—**Reconnaissance**, **Web Scanning**, **Password Cracking**, and **Packet Analysis**—with descriptions, icons, and relevant commands in a clean and well-organized format:
-
----
 
 ````markdown
 # 🛡️ Cybersecurity Hands-On Lab
