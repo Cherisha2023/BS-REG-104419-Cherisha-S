@@ -1,28 +1,37 @@
 
-````markdown
-# 🛡️ Cybersecurity Hands-On Lab
-
-This repository contains practical cybersecurity tasks for learning key techniques in network scanning, web application vulnerability assessment, password cracking, and packet analysis using industry-standard open-source tools.
-
 ---
 
 ## 🛰️ Task 1: Reconnaissance & Scanning
 
-**Tools**: `nmap`, `netdiscover`  
-**Goal**: Identify active hosts, open ports, services, and operating systems in a network.
+**Tools**: [`nmap`](https://nmap.org/), [`netdiscover`](https://github.com/alexxy/netdiscover)
+**Goal**: Enumerate live hosts, detect open ports, discover services and gather OS-level information about target systems.
 
-### 🔧 Commands
+### 🔧 Steps
 
 ```bash
-# Discover live hosts on the local subnet
+# Step 1: Discover live hosts on your local network
 sudo netdiscover -r 192.168.1.0/24
 
-# Perform a TCP SYN scan with service/version detection
+# Step 2: Scan a specific host for open ports and service versions
 nmap -sS -sV -T4 -Pn 192.168.1.10
 
-# Comprehensive scan with OS detection and scripts
+# Step 3: Run an aggressive scan (includes OS detection, scripts, and traceroute)
 nmap -A 192.168.1.10
-````
+```
+
+### 🧠 What to Look For
+
+* Live IPs and MAC addresses (via `netdiscover`)
+* Open ports (e.g., 22, 80, 443, 3306)
+* Running services and their versions
+* Potential OS type and device fingerprinting
+
+### ✅ Use Cases
+
+* Network inventory before an attack simulation
+* Target selection for vulnerability scanning
+* Mapping unknown or undocumented subnets
+
 
 ---
 
